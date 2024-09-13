@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gastro</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="icon" type="image/ico" href="images/favicon.ico">
+</head>
+
+<body class="body">
+  <header class="header">
+    <a href="#"><img src="images/gastro-logo.svg" width="124" height="22" alt="gastro logo"></a>
+    <div class="search-section">
+      <form>
+        <input type="text" id="search" class="search-input" placeholder="What do you want to eat?">
+        <span><img src="images/Search-Outline.svg" width="20" height="20" alt="search icon"></span>
+      </form>
+    </div>
+    <nav class="nav">
+      <span class="close-burger-menu-btn"><img src="images/close-burger-menu.svg" width="24" height="24"
+          alt="close burger menu"></span>
+      <a href="#">Breakfast</a>
+      <a href="#">Lunch</a>
+      <a href="#">Dinner</a>
+      <a href="#">Dessert</a>
+    </nav>
+    <span class="burger-menu-btn"><img src="images/burger-menu.svg" width="22" height="24" alt="burger menu"></span>
+    <div class="overlay"></div>
+  </header>
+
+  <main>
+    <div class="hero-shot">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="reserve-table">
+      <h3>Reserve your table now!</h3>
+      <form>
+        <div class="input-pair">
+
+          <input type="text" placeholder="Name" required>
+        </div>
+
+        <div class="input-pair pair-short">
+          <p>Date:</p>
+          <input type="date" required id="textDate">
+        </div>
+
+        <div class="input-pair pair-short">
+          <p>Time:</p>
+          <input type="time" min="10:00" max="01:00" required>
+        </div>
+
+        <div class="input-pair">
+          <p>Number of people:<output id="value"></output></p>
+          <input id="people-input" type="range" min="1" max="20" value="1" required>
+        </div>
+
+        <input class="submit" type="submit" value="Reserve Table">
+      </form>
+    </div>
+
+    <div class="student-menu-navbar">
+      <span class="student-name">Breakfast</span>
+      <span class="student-name">Lunch</span>
+      <span class="student-name">Dinner</span>
+      <span class="student-name">Dessert</span>
+    </div>
+    <div class="breakfast student-menu">
+      <div class="product-menu">
+        <h3>Food Menu</h3>
+        <h2 class="second-heading">Most Popular Items</h2>
+        <div class="allFoodContainer">
+          <div class="food-container">
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/avocadoSandwich.jpg" alt="avocadoSandwich" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Avocado Sandwich</h2>
+                  <span>15$</span>
+                </div>
+                <p>Ingredients: wholegrain bread, slices Brie cheese, avocado, cranberries, small tomato.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/donut.jpg" alt="donut" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Donut</h2>
+                  <span>10$</span>
+                </div>
+                <p>Ingredients: cup milk, white vinegar, cup white sugar, egg, flour, salt.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/benedict.jpg" alt="Eggs Benedict" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Eggs Benedict</h2>
+                  <span>12$</span>
+                </div>
+                <p>Ingredients: english muffins, eggs, canadian bacon, Vinegar (just a splash).</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/fruitSalad.jpg" alt="fruitSalad" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Fruit Salad</h2>
+                  <span>11$</span>
+                </div>
+                <p>Ingredients: pineapple, strawberries, kiwis, bananas, oranges, grapes, and blueberries.</p>
+              </div>
+            </div>
+          </div>
+          <div class="food-container">
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/oat-meal.jpg" alt="Oatmeal" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Oatmeal</h2>
+                  <span>12$</span>
+                </div>
+                <p>Ingredients: yogurt, oats, granola, fruits, honey, nuts, peanut butter.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/waffles.jpg" alt="Waffles" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Waffles</h2>
+                  <span>13$</span>
+                </div>
+                <p>Ingredients: sugar, vanilla, salt, eggs, butter, baking powder, flour, milk, maple syrup.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/omelette.jpg" alt="Omelette" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Omelette</h2>
+                  <span>14$</span>
+                </div>
+                <p>Ingredients: eggs, butter, vegetables, bacon, cheese, salt, pepper, mushrooms.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/english.jpg" alt="English breakfast" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>English breakfast</h2>
+                  <span>15$</span>
+                </div>
+                <p>Ingredients: eggs, sausage, bacon, tomato, mushroom, toast, beans.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lunch student-menu">
+      <div class="product-menu">
+        <h3>Food Menu</h3>
+        <h2 class="second-heading">Most Popular Items</h2>
+        <div class="allFoodContainer">
+          <div class="food-container">
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/steak.jpg" alt="Steak" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Steak</h2>
+                  <span>25$</span>
+                </div>
+                <p>Ingredients: sirloin steak, olive oil and butter, kosher salt, black pepper, garlic cloves, thyme and parsley.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/caesar.jpg" alt="Caesar" width="130" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Caesar salad</h2>
+                  <span>15$</span>
+                </div>
+                <p>Ingredients: romaine Lettuce, croutons, parmesan cheese, caesar dressing, egg, chicken, olive oil, salt, pepper.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/pasta.jpg" alt="pasta" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Pasta</h2>
+                  <span>15$</span>
+                </div>
+                <p>Ingredients: pasta, butter, garlic, tomato paste, tomato sauce, heavy cream.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/risotto.jpg" alt="Risotto" width="70" height="50">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Risotto</h2>
+                  <span>16$</span>
+                </div>
+                <p>Ingredients: risotto, garlic, lemon, pecorino cheese, mushrooms, butter, parmesan, creme fraiche.</p>
+              </div>
+            </div>
+          </div>
+          <div class="food-container">
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/burger.jpg" alt="burger" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Burger</h2>
+                  <span>15$</span>
+                </div>
+                <p>Ingredients: onion, beef mince, egg, oil, burger buns, salt.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/fish.jpg" alt="fish" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Fish</h2>
+                  <span>18$</span>
+                </div>
+                <p>Ingredients: flour, salt, black pepper, fish fillets, vegetable oil, lemon, tartar sauce.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/mushroomSoup.jpg" alt="mushroomSoup" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Mushroom Soup</h2>
+                  <span>14$</span>
+                </div>
+                <p>Ingredients: butter, onions, garlic, mushrooms, flour, cream, parsley.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/pizza.jpg" alt="pizza" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Pizza</h2>
+                  <span>15$</span>
+                </div>
+                <p>Ingredients: flour, tomato ketchup, onion, sugar, baking powder, olive oil, cheese, mushroom, oregano, mozzarella.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="dinner student-menu">
+      <div class="product-menu">
+        <h3>Food Menu</h3>
+        <h2 class="second-heading">Most Popular Items</h2>
+      
+        <div class="allFoodContainer">
+          <div class="food-container">
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/skewers.jpg" alt="Beef and Broccoli Skewers" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Beef and Broccoli Skewers</h2>
+                  <span>12$</span>
+                </div>
+                <p>Ingredients: steak, broccoli, soy sauce, rice wine vinegar, honey, sesame oil, garlic, scallions, salt, pepper.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/caprese.jpg" alt="Grilled Chicken Caprese" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Grilled Chicken Caprese</h2>
+                  <span>14$</span>
+                </div>
+                <p>Ingredients: romaine Lettuce, croutons, parmesan cheese, caesar dressing, egg, chicken, olive oil, salt, pepper.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/veggieStirFry.jpg" alt="Veggie Stir Fry" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Veggie Stir Fry</h2>
+                  <span>13$</span>
+                </div>
+                <p>Ingredients: bell peppers, broccoli, soy sauce, garlic, tofu.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/grainBowl.jpg" alt="Grain bowl" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Grain bowl</h2>
+                  <span>12$</span>
+                </div>
+                <p>Ingredients: brown rice, black beans, sweet corn, avocado, salsa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="food-container">
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/tacos.jpg" alt="Tacos" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Tacos</h2>
+                  <span>12$</span>
+                </div>
+                <p>Ingredients: tortilas, ground beef, avocado, taco seasoning, lettuce, pico de gallo.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/shrimp.jpg" alt="Grilled Shrimp" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Grilled Shrimp</h2>
+                  <span>15$</span>
+                </div>
+                <p>Ingredients: shrimps, olive oil, lemon juice, smoked paprika, salt, black pepper, old bay seasoning.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/sub.jpg" alt="Italian sub salad" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Italian Sub Salad</h2>
+                  <span>11$</span>
+                </div>
+                <p>Ingredients: lettuce, tomatoes, cucumbers, olives, ham, provolone cheese, italian dressing, egg, basil.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/burrito.jpg" alt="Beef burrito" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Beef burrito</h2>
+                  <span>11$</span>
+                </div>
+                <p>Ingredients: beef, tortilla, rice, cheese, salsa, sour cream, guacamole, lettuce, tomato, lime, spices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dessert student-menu">
+      <div class="product-menu">
+        <h3>Food Menu</h3>
+        <h2 class="second-heading">Most Popular Items</h2>
+        <div class="allFoodContainer">
+          <div class="food-container">
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/brownies.jpg" alt="Brownies" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Brownies</h2>
+                  <span>7$</span>
+                </div>
+                <p>Ingredients: flour, sugar, cocoa, butter, eggs, vanilla, salt, baking powder.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/Schwarzwald.jpg" alt="Schwarzwald cake" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Schwarzwald cake</h2>
+                  <span>9$</span>
+                </div>
+                <p>Ingredients: flour, sugar, cocoa, eggs, butter, cream, cherries, chocolate, kirsch.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/tiramisu.jpg" alt="Tiramisu" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Tiramisu</h2>
+                  <span>8$</span>
+                </div>
+                <p>Ingredients: mascarpone, espresso, ladyfingers, sugar, eggs, cocoa, cream.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/lemon.jpg" alt="Lemon cake" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Lemon cake</h2>
+                  <span>8$</span>
+                </div>
+                <p>Ingredients: flour, sugar, butter, eggs, lemon, baking powder, milk.</p>
+              </div>
+            </div>
+          </div>
+          <div class="food-container">
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/lava.jpg" alt="Chocolate lava cake" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Chocolate lava cake</h2>
+                  <span>11$</span>
+                </div>
+                <p>Ingredients: chocolate, butter, sugar, eggs, flour, vanilla ice cream.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/cheesecake.jpg" alt="Cheesecake" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Cheesecake</h2>
+                  <span>10$</span>
+                </div>
+                <p>Ingredients: graham cracker crumbs, sugar, butter, cream cheese, eggs, sour cream, vanilla extract, lemon juice, salt.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/pannacotta.jpg" alt="Panna Cotta" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Panna Cotta</h2>
+                  <span>9$</span>
+                </div>
+                <p>Ingredients: heavy cream, milk, sugar, gelatin, vanilla extract.</p>
+              </div>
+            </div>
+            <div class="breakfast-container">
+              <img class="foodImg" src="images/applecrisp.jpg" alt="Apple Crisp" width="70" height="60">
+              <div class="description">
+                <div class="price-container">
+                  <h2>Apple Crisp</h2>
+                  <span>10$</span>
+                </div>
+                <p>Ingredients: apples, sugar, cinnamon, lemon juice, oats, flour, brown sugar, butter, salt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="delivery">
+      <div class="delivery-title">
+        <h3>Order your food to go!</h3>
+      </div>
+      <div class="delivery-inner">
+        <div class="delivery-options">
+          <div class="delivery-options-item">
+            <h3 class="delivery-option-title">Delivery <span class="delivery-option-btn"></span></h3>
+            <div class="checkbox-list delivery-options-list">
+              <div class="options-checkbox">
+                <input type="radio" class="checkbox" id="checkbox1" name="delivery">
+                <span class="box-icon"></span>
+                <label for="checkbox1" class="checkbox-label">Take from restaurant</label>
+              </div>
+              <div class="options-checkbox">
+                <input type="radio" class="checkbox" id="checkbox2" name="delivery">
+                <span class="box-icon"></span>
+                <label for="checkbox2" class="checkbox-label">Delivery to your address</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="delivery-options">
+          <div class="delivery-options-item">
+            <h3 class="delivery-option-title">Payment <span class="delivery-option-btn"></span></h3>
+            <div class="checkbox-list paymet-options">
+              <div class="options-checkbox">
+                <input type="radio" class="checkbox" id="checkbox3" name="payment">
+                <span class="box-icon"></span>
+                <label for="checkbox3" class="checkbox-label">Pay with card</label>
+              </div>
+              <div class="options-checkbox">
+                <input type="radio" class="checkbox" id="checkbox4" name="payment">
+                <span class="box-icon"></span>
+                <label for="checkbox4" class="checkbox-label">Pay cash</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart"><span class="cart-btn">My Cart</span></div>
+    </div>
+    <div class="about">
+      <h3>Something about us</h3>
+      <div class="about-info">
+        The restaurant Gastro was born out of love and respect for these humble deli creations, met with a desire to
+        bring quality ingredients to the table. Simply put, we're here to bring you a lunch experienxe you can feel good
+        about.
+      </div>
+      <div class="about-facts">
+        <div class="about-facts-inner">
+          <div class="about-facts-item">
+            <img src="images/House Chimney 2.svg" width="40" height="40" alt="since">
+            <span>Since 2008</span>
+          </div>
+          <div class="about-facts-item">
+            <img src="images/cutlery 4.svg" width="40" height="40" alt="dishes">
+            <span>100.000+ Dishes Made</span>
+          </div>
+          <div class="about-facts-item">
+            <img src="images/Business Deal Handshake Circle.svg" width="40" height="40" alt="partners">
+            <span>10+ Partners</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-inner-top">
+        <div class="footer-item">
+          <h3>Location</h3>
+          <div class="footer-item-info footer-location">
+            <span>Shirok Sokak 230</span>
+            <span>7000, Bitola | Macedonia</span>
+          </div>
+        </div>
+        <div class="footer-item">
+          <h3>Kitchen</h3>
+          <div class="footer-item-info">
+            <div>
+              <span>Sun - Wed</span>
+              <span>10AM - 10PM</span>
+            </div>
+            <div>
+              <span>Thu - Sat</span>
+              <span>10AM - 12AM</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-item">
+          <h3>Bar</h3>
+          <div class="footer-item-info">
+            <div>
+              <span>Sun - Wed</span>
+              <span>10AM - 12AM</span>
+            </div>
+            <div>
+              <span>Thu - Sat</span>
+              <span>10AM - 04AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-inner-bottom">
+        <div class="socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+        </div>
+        <div class="footer-menu">
+          <a href="#">Home</a>
+          <a href="#">Menu</a>
+          <a href="#">Bar</a>
+          <a href="#">Take Out - Delivery</a>
+          <a href="#" target="_blank">Location</a>
+          <a href="#">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1155 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+p,
+a,
+img,
+i,
+ul,
+li,
+form,
+label,
+article,
+canvas,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+a img {
+  border: none;
+}
+
+article,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+input {
+  background: none;
+  border: none;
+}
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+input:active {
+  outline: none;
+  box-shadow: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+select:active {
+  outline: none;
+  box-shadow: none;
+}
+
+@font-face {
+  font-family: "Nanum Regular";
+  src: url(../fonts/NanumMyeongjo-Regular.woff2);
+}
+@font-face {
+  font-family: "Nanum Bold";
+  src: url(../fonts/NanumMyeongjo-Bold.woff2);
+}
+@font-face {
+  font-family: "Nanum Extra Bold";
+  src: url(../fonts/NanumMyeongjo-ExtraBold.woff2);
+}
+body {
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  padding: 10px 30px;
+  background-color: #000;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+}
+header .search-section {
+  background-color: #fff;
+  border-radius: 30px;
+  width: 400px;
+  padding: 5px 10px;
+}
+header .search-section form {
+  display: flex;
+}
+header .search-section form input {
+  width: 100%;
+}
+header nav a {
+  color: #fff;
+  font-family: "Nanum Regular";
+  text-transform: uppercase;
+  margin: 0 15px;
+}
+header nav a:hover {
+  color: #d90429;
+}
+@media (min-width: 992px) {
+  header .burger-menu-btn,
+  header .close-burger-menu-btn {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    background-color: #000;
+    width: 30%;
+    z-index: 20;
+    padding: 15px;
+    align-items: center;
+    padding-top: 30px;
+    transition: right 0.5s ease-in-out;
+  }
+  header nav a {
+    margin: 15px;
+  }
+  header nav a:first-of-type {
+    margin-top: 30px;
+  }
+  header nav .close-burger-menu-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  header .js-burger-menu {
+    transition: right 0.5s ease-in-out;
+    right: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  header {
+    flex-wrap: wrap;
+    transition: height 0.5s ease-in-out;
+  }
+  header .search-section {
+    order: 3;
+    width: 100%;
+    margin: 15px 0;
+  }
+  header.menu-scroll {
+    height: 45px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+  }
+  header nav {
+    width: 100%;
+  }
+}
+
+.overlay {
+  width: 0;
+  height: 100vh;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.75;
+  transition: width 0.5s ease-in-out;
+  top: 0;
+  left: 0;
+}
+
+.js-overlay {
+  width: 100vw;
+  transition: width 0.5s ease-in-out;
+}
+
+main {
+  margin-top: 45px;
+}
+main .hero-shot {
+  background-image: url(../images/hero-shot.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 45px);
+  background-position: center;
+  position: relative;
+}
+main .hero-shot .hero-overlay {
+  background-color: #000;
+  opacity: 0.75;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+main .reserve-table {
+  padding: 30px 0;
+  width: 100%;
+}
+main .reserve-table h3 {
+  font-family: "Nanum Extra Bold";
+  font-size: 20px;
+  text-transform: uppercase;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  letter-spacing: 0.75px;
+  margin: 10px auto;
+  text-align: center;
+}
+main .reserve-table h3:after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  border-radius: 30px;
+  background-color: #d90429;
+  margin: 5px auto;
+}
+main .reserve-table form {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000;
+}
+@media (max-width: 575.98px) {
+  main .reserve-table form {
+    flex-direction: column;
+  }
+  main .reserve-table form .input-pair {
+    width: 100%;
+  }
+}
+main .reserve-table .input-pair {
+  width: 50%;
+  padding: 15px;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+main .reserve-table .input-pair input {
+  color: #fff;
+  font-family: "Nanum Bold";
+}
+main .reserve-table .input-pair.pair-short {
+  display: flex;
+  align-items: center;
+}
+main .reserve-table .input-pair input[type=text] {
+  max-width: 300px;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid #fff;
+  caret-color: #d90429;
+}
+main .reserve-table .input-pair input[type=text]::-moz-placeholder {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+main .reserve-table .input-pair input[type=text]::placeholder {
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+main .reserve-table .input-pair input[type=text]:focus-within {
+  border-bottom: 1px solid #d90429;
+}
+main .reserve-table .input-pair input[type=date] {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(3%) saturate(13%) hue-rotate(81deg) brightness(106%) contrast(106%);
+}
+main .reserve-table .input-pair input[type=range] {
+  width: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+main .reserve-table input[type=submit] {
+  background-color: #d90429;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+main .reserve-table .submit {
+  padding: 5px 30px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+main .student-menu-navbar {
+  max-width: 80%;
+  margin: 15px auto 50px;
+  display: flex;
+  justify-content: space-between;
+}
+main .student-menu-navbar span {
+  cursor: pointer;
+  font-family: "Nanum Extra Bold";
+  font-size: 18px;
+  color: #000;
+  text-transform: uppercase;
+  padding: 0 15px;
+}
+main .student-menu-navbar span:hover {
+  color: #d90429;
+  text-decoration: underline;
+}
+@media (max-width: 991.98px) {
+  main .student-menu-navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .student-menu-navbar span {
+    margin: 10px 0;
+  }
+}
+main .js-student-name {
+  color: #d90429 !important;
+}
+main .student-menu {
+  height: 0;
+  overflow: hidden;
+}
+main .js-student-menu {
+  max-height: 100%;
+  height: auto;
+}
+main .breakfast .allFoodContainer {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+main .breakfast .allFoodContainer .food-container {
+  width: 500px;
+  padding: 0 20px;
+}
+main .breakfast .allFoodContainer .food-container .breakfast-container {
+  display: flex;
+  padding-bottom: 20px;
+}
+main .breakfast .allFoodContainer .food-container .breakfast-container .foodImg {
+  cursor: pointer;
+  margin-right: 20px;
+}
+main .breakfast .allFoodContainer .food-container .breakfast-container .description {
+  display: flex;
+  flex-direction: column;
+}
+main .breakfast .allFoodContainer .food-container .breakfast-container .description p {
+  padding-top: 8px;
+  font-style: italic;
+  font-family: "Nanum Bold";
+  font-size: 15px;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .breakfast .allFoodContainer .food-container .breakfast-container .description p {
+    font-size: 9px;
+  }
+}
+main .breakfast .allFoodContainer .food-container .breakfast-container .description .price-container {
+  display: flex;
+  border-bottom: 1px solid rgb(205, 200, 200);
+  padding-bottom: 8px;
+  align-items: center;
+}
+main .breakfast .allFoodContainer .food-container .breakfast-container .description .price-container h2 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Nanum Regular";
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+main .breakfast .allFoodContainer .food-container .breakfast-container .description .price-container span {
+  margin-left: auto;
+  color: #d90429;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .breakfast .allFoodContainer .food-container .breakfast-container .description .price-container h2 {
+    font-size: 10px;
+  }
+  main .breakfast .allFoodContainer .food-container .breakfast-container .description .price-container span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  main .breakfast .allFoodContainer .food-container .breakfast-container {
+    margin: 0 20%;
+  }
+}
+main .breakfast .product-menu h3 {
+  display: flex;
+  font-weight: bold;
+  font-size: 25px;
+  color: #d90429;
+  justify-content: center;
+  cursor: pointer;
+  max-width: 40%;
+  margin: auto;
+}
+main .breakfast .product-menu h3:before, main .breakfast .product-menu h3:after {
+  content: "";
+  flex: 1 1;
+  width: 300px;
+  height: 2px;
+  background-color: #d90429;
+  margin: auto;
+}
+main .breakfast .product-menu h3:before {
+  margin-right: 8px;
+}
+main .breakfast .product-menu h3:after {
+  margin-left: 8px;
+}
+main .breakfast .product-menu .second-heading {
+  font-size: 35px;
+  color: #000;
+  text-align: center;
+  font-family: "Nanum Regular";
+  padding-top: 20px;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .breakfast .product-menu .product-menu,
+  main .breakfast .product-menu h3 {
+    font-size: 15px;
+  }
+  main .breakfast .product-menu .second-heading {
+    font-size: 19px;
+  }
+}
+@media (max-width: 767.98px) {
+  main .breakfast .allFoodContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .breakfast .allFoodContainer .food-container {
+    width: auto;
+  }
+  main .breakfast .allFoodContainer .food-container .breakfast-container {
+    margin: 0 10px;
+  }
+}
+main .lunch .allFoodContainer {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+main .lunch .allFoodContainer .food-container {
+  width: 500px;
+  padding: 0 20px;
+}
+main .lunch .allFoodContainer .food-container .breakfast-container {
+  display: flex;
+  padding-bottom: 20px;
+}
+main .lunch .allFoodContainer .food-container .breakfast-container .foodImg {
+  cursor: pointer;
+  margin-right: 20px;
+}
+main .lunch .allFoodContainer .food-container .breakfast-container .description {
+  display: flex;
+  flex-direction: column;
+}
+main .lunch .allFoodContainer .food-container .breakfast-container .description p {
+  padding-top: 8px;
+  font-style: italic;
+  font-family: "Nanum Bold";
+  font-size: 15px;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .lunch .allFoodContainer .food-container .breakfast-container .description p {
+    font-size: 9px;
+  }
+}
+main .lunch .allFoodContainer .food-container .breakfast-container .description .price-container {
+  display: flex;
+  border-bottom: 1px solid rgb(205, 200, 200);
+  padding-bottom: 8px;
+  align-items: center;
+}
+main .lunch .allFoodContainer .food-container .breakfast-container .description .price-container h2 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Nanum Regular";
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+main .lunch .allFoodContainer .food-container .breakfast-container .description .price-container span {
+  margin-left: auto;
+  color: #d90429;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .lunch .allFoodContainer .food-container .breakfast-container .description .price-container h2 {
+    font-size: 10px;
+  }
+  main .lunch .allFoodContainer .food-container .breakfast-container .description .price-container span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  main .lunch .allFoodContainer .food-container .breakfast-container {
+    margin: 0 20%;
+  }
+}
+main .lunch .product-menu h3 {
+  display: flex;
+  font-weight: bold;
+  font-size: 25px;
+  color: #d90429;
+  justify-content: center;
+  cursor: pointer;
+  max-width: 40%;
+  margin: auto;
+}
+main .lunch .product-menu h3:before, main .lunch .product-menu h3:after {
+  content: "";
+  flex: 1 1;
+  width: 300px;
+  height: 2px;
+  background-color: #d90429;
+  margin: auto;
+}
+main .lunch .product-menu h3:before {
+  margin-right: 8px;
+}
+main .lunch .product-menu h3:after {
+  margin-left: 8px;
+}
+main .lunch .product-menu .second-heading {
+  font-size: 35px;
+  color: #000;
+  text-align: center;
+  font-family: "Nanum Regular";
+  padding-top: 20px;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .lunch .product-menu .product-menu,
+  main .lunch .product-menu h3 {
+    font-size: 15px;
+  }
+  main .lunch .product-menu .second-heading {
+    font-size: 19px;
+  }
+}
+@media (max-width: 767.98px) {
+  main .lunch .allFoodContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .lunch .allFoodContainer .food-container {
+    width: auto;
+  }
+  main .lunch .allFoodContainer .food-container .breakfast-container {
+    margin: 0 10px;
+  }
+}
+main .dinner .allFoodContainer {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+main .dinner .allFoodContainer .food-container {
+  width: 500px;
+  padding: 0 20px;
+}
+main .dinner .allFoodContainer .food-container .breakfast-container {
+  display: flex;
+  padding-bottom: 20px;
+}
+main .dinner .allFoodContainer .food-container .breakfast-container .foodImg {
+  cursor: pointer;
+  margin-right: 20px;
+}
+main .dinner .allFoodContainer .food-container .breakfast-container .description {
+  display: flex;
+  flex-direction: column;
+}
+main .dinner .allFoodContainer .food-container .breakfast-container .description p {
+  padding-top: 8px;
+  font-style: italic;
+  font-family: "Nanum Bold";
+  font-size: 15px;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .dinner .allFoodContainer .food-container .breakfast-container .description p {
+    font-size: 9px;
+  }
+}
+main .dinner .allFoodContainer .food-container .breakfast-container .description .price-container {
+  display: flex;
+  border-bottom: 1px solid rgb(205, 200, 200);
+  padding-bottom: 8px;
+  align-items: center;
+}
+main .dinner .allFoodContainer .food-container .breakfast-container .description .price-container h2 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Nanum Regular";
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+main .dinner .allFoodContainer .food-container .breakfast-container .description .price-container span {
+  margin-left: auto;
+  color: #d90429;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .dinner .allFoodContainer .food-container .breakfast-container .description .price-container h2 {
+    font-size: 10px;
+  }
+  main .dinner .allFoodContainer .food-container .breakfast-container .description .price-container span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  main .dinner .allFoodContainer .food-container .breakfast-container {
+    margin: 0 20%;
+  }
+}
+main .dinner .product-menu h3 {
+  display: flex;
+  font-weight: bold;
+  font-size: 25px;
+  color: #d90429;
+  justify-content: center;
+  cursor: pointer;
+  max-width: 40%;
+  margin: auto;
+}
+main .dinner .product-menu h3:before, main .dinner .product-menu h3:after {
+  content: "";
+  flex: 1 1;
+  width: 300px;
+  height: 2px;
+  background-color: #d90429;
+  margin: auto;
+}
+main .dinner .product-menu h3:before {
+  margin-right: 8px;
+}
+main .dinner .product-menu h3:after {
+  margin-left: 8px;
+}
+main .dinner .product-menu .second-heading {
+  font-size: 35px;
+  color: #000;
+  text-align: center;
+  font-family: "Nanum Regular";
+  padding-top: 20px;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .dinner .product-menu .product-menu,
+  main .dinner .product-menu h3 {
+    font-size: 15px;
+  }
+  main .dinner .product-menu .second-heading {
+    font-size: 19px;
+  }
+}
+@media (max-width: 767.98px) {
+  main .dinner .allFoodContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .dinner .allFoodContainer .food-container {
+    width: auto;
+  }
+  main .dinner .allFoodContainer .food-container .breakfast-container {
+    margin: 0 10px;
+  }
+}
+main .dessert .allFoodContainer {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+main .dessert .allFoodContainer .food-container {
+  width: 500px;
+  padding: 0 20px;
+}
+main .dessert .allFoodContainer .food-container .breakfast-container {
+  display: flex;
+  padding-bottom: 20px;
+}
+main .dessert .allFoodContainer .food-container .breakfast-container .foodImg {
+  cursor: pointer;
+  margin-right: 20px;
+}
+main .dessert .allFoodContainer .food-container .breakfast-container .description {
+  display: flex;
+  flex-direction: column;
+}
+main .dessert .allFoodContainer .food-container .breakfast-container .description p {
+  padding-top: 8px;
+  font-style: italic;
+  font-family: "Nanum Bold";
+  font-size: 15px;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .dessert .allFoodContainer .food-container .breakfast-container .description p {
+    font-size: 9px;
+  }
+}
+main .dessert .allFoodContainer .food-container .breakfast-container .description .price-container {
+  display: flex;
+  border-bottom: 1px solid rgb(205, 200, 200);
+  padding-bottom: 8px;
+  align-items: center;
+}
+main .dessert .allFoodContainer .food-container .breakfast-container .description .price-container h2 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Nanum Regular";
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+main .dessert .allFoodContainer .food-container .breakfast-container .description .price-container span {
+  margin-left: auto;
+  color: #d90429;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .dessert .allFoodContainer .food-container .breakfast-container .description .price-container h2 {
+    font-size: 10px;
+  }
+  main .dessert .allFoodContainer .food-container .breakfast-container .description .price-container span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  main .dessert .allFoodContainer .food-container .breakfast-container {
+    margin: 0 20%;
+  }
+}
+main .dessert .product-menu h3 {
+  display: flex;
+  font-weight: bold;
+  font-size: 25px;
+  color: #d90429;
+  justify-content: center;
+  cursor: pointer;
+  max-width: 40%;
+  margin: auto;
+}
+main .dessert .product-menu h3:before, main .dessert .product-menu h3:after {
+  content: "";
+  flex: 1 1;
+  width: 300px;
+  height: 2px;
+  background-color: #d90429;
+  margin: auto;
+}
+main .dessert .product-menu h3:before {
+  margin-right: 8px;
+}
+main .dessert .product-menu h3:after {
+  margin-left: 8px;
+}
+main .dessert .product-menu .second-heading {
+  font-size: 35px;
+  color: #000;
+  text-align: center;
+  font-family: "Nanum Regular";
+  padding-top: 20px;
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  main .dessert .product-menu .product-menu,
+  main .dessert .product-menu h3 {
+    font-size: 15px;
+  }
+  main .dessert .product-menu .second-heading {
+    font-size: 19px;
+  }
+}
+@media (max-width: 767.98px) {
+  main .dessert .allFoodContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .dessert .allFoodContainer .food-container {
+    width: auto;
+  }
+  main .dessert .allFoodContainer .food-container .breakfast-container {
+    margin: 0 10px;
+  }
+}
+main .delivery-title {
+  font-family: "Nanum Extra Bold";
+  font-size: 20px;
+  text-transform: uppercase;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  letter-spacing: 0.75px;
+  margin: 40px auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+main .delivery-title h3:after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  border-radius: 30px;
+  margin: 5px auto;
+  background-color: #d90429;
+}
+main .delivery-inner {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+}
+main .delivery-inner .delivery-options {
+  margin: 0 15%;
+  width: 30%;
+}
+main .delivery-inner .delivery-options-item {
+  width: 100%;
+}
+main .delivery-inner .delivery-options-item .delivery-option-title {
+  display: flex;
+  font-family: "Nanum Bold";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+main .delivery-inner .delivery-options-item .delivery-option-title .delivery-option-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+main .delivery-inner .delivery-options-item .delivery-option-title .delivery-option-btn:after {
+  content: "|";
+  position: absolute;
+  left: -3.5px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+main .delivery-inner .delivery-options-item .delivery-option-title .delivery-option-btn:before {
+  content: "|";
+  position: absolute;
+  transform: rotate(90deg);
+  margin: auto;
+}
+main .delivery-inner .delivery-options-item .checkbox-list {
+  margin: 10px 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+main .delivery-inner .delivery-options-item .checkbox-list .options-checkbox {
+  margin: 5px 0;
+  text-transform: capitalize;
+  font-family: "Nanum Bold";
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+main .delivery-inner .delivery-options-item .checkbox-list .options-checkbox .checkbox {
+  height: 16px;
+  width: 16px;
+  z-index: 15;
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+main .delivery-inner .delivery-options-item .checkbox-list .options-checkbox .box-icon {
+  border: 2px solid #fff;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: black;
+  display: block;
+  position: absolute;
+  left: 2px;
+}
+main .delivery-inner .delivery-options-item .checkbox-list .options-checkbox .checkbox-label {
+  cursor: pointer;
+}
+main .delivery-inner .delivery-options-item .checkbox-list .options-checkbox input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+main .delivery-inner .delivery-options-item .checkbox-list .options-checkbox input[type=radio]:checked ~ .checkbox-label {
+  color: #d90429;
+}
+main .delivery-inner .delivery-options-item .checkbox-list .options-checkbox input[type=radio]:checked ~ .box-icon {
+  background-color: #d90429;
+  background-image: url(../images/checkbox-chexked.svg);
+  border: 0;
+}
+main .delivery-inner .delivery-options-item .js-delivery-option-title .delivery-option-btn:after {
+  transition: height 0.5s ease-in-out;
+  height: 16px;
+}
+main .delivery-inner .delivery-options-item .js-checkbox-list {
+  height: 80px;
+  transition: height 0.5s ease-in-out;
+}
+@media (max-width: 575.98px) {
+  main .delivery-inner {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  main .delivery-inner .delivery-options {
+    width: auto;
+  }
+}
+main .delivery .cart {
+  display: block;
+  background-color: #000;
+  line-height: normal;
+  padding: 20px;
+}
+main .delivery .cart-btn {
+  display: block;
+  background-color: transparent;
+  color: #d90429;
+  border-radius: 10px;
+  font-family: "Nanum Extra Bold";
+  font-size: 16px;
+  border: 1px solid #d90429;
+  padding: 5px 30px;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+  cursor: pointer;
+  margin-top: 0;
+  transition: all 0.5s ease-in-out;
+}
+main .delivery .cart-btn:hover {
+  color: #fff;
+  background-color: #d90429;
+  transition: all 0.5s ease-in-out;
+}
+main .about h3 {
+  font-family: "Nanum Extra Bold";
+  font-size: 20px;
+  text-transform: uppercase;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  letter-spacing: 0.75px;
+  margin: 40px auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+main .about h3:after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  border-radius: 30px;
+  margin: 5px auto;
+  background-color: #d90429;
+}
+main .about-info {
+  max-width: 80%;
+  margin: 15px auto;
+  text-align: center;
+  font-family: "Nanum Bold";
+}
+main .about-facts {
+  max-width: 80%;
+  margin: 30px auto;
+}
+main .about-facts-inner {
+  display: flex;
+  justify-content: space-between;
+}
+main .about-facts-inner .about-facts-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .about-facts-inner .about-facts-item img {
+  width: 150px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(9%) sepia(50%) saturate(7086%) hue-rotate(341deg) brightness(151%) contrast(109%);
+}
+main .about-facts-inner .about-facts-item span {
+  font-family: "Nanum Extra Bold";
+  font-size: 20px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  width: 150px;
+  text-align: center;
+  line-height: 25px;
+}
+@media (max-width: 767.98px) {
+  main .about .about-facts-item img {
+    width: 50px;
+    height: auto;
+  }
+}
+@media (max-width: 575.98px) {
+  main .about .about-facts-inner {
+    flex-direction: column;
+  }
+  main .about .about-facts-inner .about-facts-item {
+    margin-bottom: 15px;
+  }
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  font-family: "Nanum Regular";
+  font-size: 16px;
+  padding: 30px 0;
+  background-image: url(../images/gastro-logo-short.svg);
+  background-repeat: no-repeat;
+  background-size: 170px;
+  background-position: bottom left;
+}
+footer .footer-inner {
+  max-width: 80%;
+  margin: 10px auto;
+}
+footer .footer-inner-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+footer .footer-inner-top .footer-item h3 {
+  font-family: "Nanum Extra Bold";
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+footer .footer-inner-top .footer-item-info {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-inner-top .footer-item-info div {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-inner-top .footer-item-info span {
+  padding-bottom: 5px;
+  display: block;
+}
+footer .footer-inner-top .footer-item-info span:nth-of-type(2) {
+  text-align: right;
+  margin-left: 15px;
+}
+footer .footer-inner-top .footer-item-info.footer-location span:nth-of-type(2) {
+  margin-left: 0;
+}
+footer .footer-inner-bottom {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+footer .footer-inner-bottom a {
+  color: #fff;
+  font-family: "Nanum Regular";
+  font-size: 16px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.5s linear;
+  transition: color 0.5s linear;
+  padding-bottom: 3px;
+}
+footer .footer-inner-bottom a:not(:last-of-type) {
+  margin-right: 15px;
+}
+footer .footer-inner-bottom a:hover {
+  color: #d90429;
+  border-color: #d90429;
+  transition: border-color 0.5s linear;
+  transition: color 0.5s linear;
+}/*# sourceMappingURL=main.css.map */
